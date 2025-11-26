@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuario - Happy Paws Club</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/usuario.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="imagenes/logo.png"
+            alt="Happy Paws Club Logo"
+            class="logo-img"
+          />
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="usuario.html" class="nav-item active">
+          <i class="fas fa-user-shield"></i>
+          <span>Usuario</span>
+        </a>
+        <a href="servicio.html" class="nav-item">
+          <i class="fas fa-dog"></i>
+          <span>Servicio</span>
+        </a>
+        <a href="comentario.html" class="nav-item">
+          <i class="fas fa-comments"></i>
+          <span>Comentario</span>
+        </a>
+        <a href="lista.html" class="nav-item">
+          <i class="fas fa-list-alt"></i>
+          <span>Lista</span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="main-content user-page">
+      <button class="back-button" onclick="window.history.back()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <p class="subtitle">atrás</p>
+
+      <div class="user-container">
+        <div class="user-buttons">
+          <button class="user-btn" id="crearUsuarioBtn">
+            <i class="fas fa-user-plus"></i>
+            <span>Crear usuario</span>
+          </button>
+
+          <button class="user-btn" id="ingresarUsuarioBtn">
+            <i class="fas fa-sign-in-alt"></i>
+            <span>Ingresar Usuario</span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div id="modalCrearUsuario" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" data-modal="modalCrearUsuario">&times;</span>
+        <h2 class="modal-title">
+          <i class="fas fa-user-plus"></i>
+          Crear Usuario
+        </h2>
+        <p class="modal-description">Regístrate en Happy Paws Club</p>
+        <form class="user-form" id="formCrearUsuario">
+          <div class="form-group">
+            <label><i class="fas fa-user"></i> Nombre completo</label>
+            <input type="text" placeholder="Tu nombre completo" required />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-envelope"></i> Correo electrónico</label>
+            <input type="email" placeholder="correo@ejemplo.com" required />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-phone"></i> Teléfono</label>
+            <input type="tel" placeholder="Número de contacto" required />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-map-marker-alt"></i> Dirección</label>
+            <input type="text" placeholder="Dirección completa" required />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-lock"></i> Contraseña</label>
+            <input
+              type="password"
+              placeholder="Mínimo 6 caracteres"
+              required
+              minlength="6"
+            />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-lock"></i> Confirmar contraseña</label>
+            <input
+              type="password"
+              placeholder="Repite tu contraseña"
+              required
+              minlength="6"
+            />
+          </div>
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" required />
+              <span>Acepto los términos y condiciones</span>
+            </label>
+          </div>
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-check"></i>
+            Crear Cuenta
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="modalIngresarUsuario" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" data-modal="modalIngresarUsuario"
+          >&times;</span
+        >
+        <h2 class="modal-title">
+          <i class="fas fa-sign-in-alt"></i>
+          Ingresar
+        </h2>
+        <p class="modal-description">Accede a tu cuenta de Happy Paws Club</p>
+        <form class="user-form" id="formIngresarUsuario">
+          <div class="form-group">
+            <label><i class="fas fa-envelope"></i> Correo electrónico</label>
+            <input type="email" placeholder="correo@ejemplo.com" required />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-lock"></i> Contraseña</label>
+            <input type="password" placeholder="Tu contraseña" required />
+          </div>
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" />
+              <span>Recordar mi sesión</span>
+            </label>
+          </div>
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-sign-in-alt"></i>
+            Iniciar Sesión
+          </button>
+          <div class="form-footer">
+            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="imagenes/logo.png"
+            alt="Happy Paws Club Logo"
+            class="footer-logo-img"
+          />
+        </div>
+        <div class="footer-info">
+          <h2 class="footer-title">Happy Paws Club</h2>
+          <div class="footer-contact">
+            <i class="fab fa-whatsapp"></i>
+            <span>Whatsapp</span>
+          </div>
+          <div class="footer-social">
+            <i class="fab fa-facebook"></i>
+            <span>Facebook</span>
+          </div>
+        </div>
+        <div class="footer-faq">
+          <h3 class="faq-title">Preguntas Frecuentes</h3>
+          <a class="faq-link" data-faq="vacunas">
+            ¿Es obligatorio que mi mascota tenga vacunas al día para usar los
+            servicios de Guardería o Peluquería?
+          </a>
+          <a class="faq-link" data-faq="supervision">
+            ¿La guardería ofrece supervisión constante?
+          </a>
+          <a class="faq-link" data-faq="cita">
+            ¿Cómo puedo solicitar una cita para cualquiera de sus servicios?
+          </a>
+        </div>
+      </div>
+    </footer>
+    <div id="modalVacunas" class="faq-modal">
+      <div class="faq-modal-content">
+        <span class="close-faq-modal" data-modal="modalVacunas">&times;</span>
+        <h2 class="faq-modal-title">
+          ¿Es obligatorio que mi mascota tenga vacunas al día para usar los
+          servicios de Guardería o Peluquería?
+        </h2>
+        <img src="imagenes/vacunas.jpg" alt="Vacunas" class="faq-modal-image" />
+        <div class="faq-modal-answer">
+          <strong>Happy Paws Club:</strong> Sí. Por seguridad de todas las
+          mascotas, requerimos comprobante de las vacunas básicas (ej. Rabia,
+          Parvovirus) para usar nuestros servicios de Guardería y
+          Baños/Peluquería.
+        </div>
+      </div>
+    </div>
+
+    <div id="modalSupervision" class="faq-modal">
+      <div class="faq-modal-content">
+        <span class="close-faq-modal" data-modal="modalSupervision"
+          >&times;</span
+        >
+        <h2 class="faq-modal-title">
+          ¿La guardería ofrece supervisión constante?
+        </h2>
+        <img
+          src="imagenes/supervision.jpg"
+          alt="Supervisión"
+          class="faq-modal-image"
+        />
+        <div class="faq-modal-answer">
+          Sí, en Happy Paws Club contamos con personal capacitado que supervisa
+          constantemente a todas las mascotas durante su estadía. Además,
+          tenemos cámaras de seguridad para garantizar el bienestar de tu
+          mascota en todo momento.
+        </div>
+      </div>
+    </div>
+
+    <div id="modalCita" class="faq-modal">
+      <div class="faq-modal-content">
+        <span class="close-faq-modal" data-modal="modalCita">&times;</span>
+        <h2 class="faq-modal-title">
+          ¿Cómo puedo solicitar una cita para cualquiera de sus servicios?
+        </h2>
+        <img src="imagenes/vacunas.jpg" alt="Cita" class="faq-modal-image" />
+        <div class="faq-modal-answer">
+          Puedes solicitar una cita de tres maneras: <br /><br />
+          1. A través de nuestra sección de <strong>Servicios</strong> en la
+          web<br />
+          2. Llamando a nuestro número de WhatsApp<br />
+          3. Visitando nuestras instalaciones directamente<br /><br />
+          Nuestro equipo te atenderá con gusto y programará la mejor fecha para
+          tu mascota.
+        </div>
+      </div>
+    </div>
+
+    <script src="js/usuario.js"></script>
+    <script src="js/footer.js"></script>
+  </body>
+</html>
